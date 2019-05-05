@@ -30,6 +30,20 @@ $background-opacity: 0.8;
 
 	}
 }
+
+//set text color
+@function set-text-color($color){
+	@if(lightness($color)>40){
+		@return #000; // Lighter backgorund, return dark color
+	} @else	{
+		@return #fff; // Darker background, return light color
+	}
+
+}
+
+
+
+
 @mixin bg-image{
 	background-repeat: no-repeat;
 	background-size: cover;
